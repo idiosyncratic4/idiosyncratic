@@ -12,7 +12,7 @@
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var hash = this.hash;
       var target = $(hash);
-      window.open('https://javascript.info/');
+      window.open('');
       if (target.length) {
         e.preventDefault();
 

@@ -7,6 +7,7 @@ on:
   push:
     branches:
       - master
+  workflow_dispatch:
 
 jobs:
   build-and-deploy:
@@ -18,7 +19,7 @@ jobs:
     - name: Set up Node.js version
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '14.x'
 
     - name: npm install, build, and test
       run: |
@@ -31,5 +32,5 @@ jobs:
       with:
         app-name: 'nandinisharmaport'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_064b196139ed4059ae1c510314c1f5fa }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_d13293ed606c4c1bae3ad12ce61484d7 }}
         package: .
